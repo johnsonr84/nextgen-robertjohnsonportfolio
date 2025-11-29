@@ -53,9 +53,9 @@ export default defineType({
       name: "shortBio",
       title: "Short Bio",
       type: "text",
-      rows: 3,
+      rows: 6,
       description: "Brief introduction (2-3 sentences)",
-      validation: (Rule) => Rule.required().max(350),
+      validation: (Rule) => Rule.required().max(450),
     }),
     defineField({
       name: "fullBio",
