@@ -11,7 +11,7 @@
     "typegen": "sanity schema extract && sanity typegen generate"
   },
   "dependencies": {
-    "@clerk/nextjs": "^6.35.2",
+    "@clerk/nextjs": "^6.35.5",
     "@openai/chatkit-react": "^1.1.1",
     "@portabletext/react": "^4.0.3",
     "@radix-ui/react-dialog": "^1.1.15",
@@ -51,10 +51,15 @@
     "tailwindcss": "^4",
     "typescript": "^5"
   },
-    "pnpm": {
+  "pnpm": {
     "overrides": {
       "@types/react": "19.2.2",
       "@types/react-dom": "19.2.2"
-    }
+    },
+    "ignoredBuiltDependencies": [
+      "@clerk/shared",
+      "esbuild",
+      "sharp"
+    ]
   }
 }
