@@ -1,169 +1,113 @@
 # 🚀 Next-Gen Portfolio — Robert Johnson  
 **AI-Powered Developer Portfolio built with Next.js 16, React 19, OpenAI AgentKit, and Sanity CMS**
 
-Live Site: **https://robertjohnsonportfolio.com/**  
-Repository: **https://github.com/johnsonr84/nextgen-robertjohnsonportfolio**
+🔗 **Live Site:** https://robertjohnsonportfolio.com  
+📦 **Repository:** https://github.com/johnsonr84/nextgen-robertjohnsonportfolio
 
 ---
 
-## 📸 Screenshots  
+# 📸 Screenshots
 
-> **Order: Profile → About → Testimonials → Experience → Projects → Skills → Contact**
+> **Order:** Profile → About → Testimonials → Experience → Projects → Skills → Contact
 
-### 🧑‍💻 Profile  
-![Profile](./public/screenshots/Profile.png)
-
-### 📄 About  
-![About](./public/screenshots/About.png)
-
-### ⭐ Testimonials  
-![Testimonials](./public/screenshots/Testimonials.png)
-
-### 🧭 Experience  
-![Experience](./public/screenshots/Experience.png)
-
-### 🧱 Projects  
-![Projects](./public/screenshots/Projects.png)
-
-### 🛠 Tech Skills  
-![Skills](./public/screenshots/Skills.png)
-
-### ✉️ Contact  
-![Contact](./public/screenshots/Contact.png)
+| Section | Screenshot |
+|--------|------------|
+| 🧑‍💻 Profile | ![Profile](./public/screenshots/Profile.png) |
+| 📄 About | ![About](./public/screenshots/About.png) |
+| ⭐ Testimonials | ![Testimonials](./public/screenshots/Testimonials.png) |
+| 🧭 Experience | ![Experience](./public/screenshots/Experience.png) |
+| 🧱 Projects | ![Projects](./public/screenshots/Projects.png) |
+| 🛠 Skills | ![Skills](./public/screenshots/Skills.png) |
+| ✉️ Contact | ![Contact](./public/screenshots/Contact.png) |
 
 ---
 
-# 🏗️ Tech Stack
+# 🏗️ Tech Stack Overview
 
-This portfolio is built using **the newest generation of web technologies**, including:
-
-### ⚛️ **Frontend / Framework**
-- **Next.js 16** (JUST released!)
-- **React 19**
-- **App Router**
-- **Server Components**
-- **Turbopack**
-
-### 🤖 **AI + OpenAI**
-- **OpenAI AgentKit** — *brand-new AI agent framework*
-- **OpenAI ChatKit** — *streaming + multimodal chat*
-- **AI Twin Chat** with 3 personalities:
-  - **Crisp**
-  - **Clear**
-  - **Chatty**
-
-### 🗂️ **CMS**
-- **Sanity CMS**
-- Sanity Studio v3
-- **Presentation Tool** for visual side-by-side editor + live preview
-- GROQ queries + Vision playground
-- Type-safe, auto-generated schema types
-
-### 🔐 **Auth**
-- **Clerk** authentication  
-  - Prebuilt components  
-  - Custom themes  
-  - Middleware protection
-
-### 🎨 **Styling & Effects**
-- **Tailwind CSS v4** (new core engine)
-- **Framer Motion** animations
-- **Aceternity UI** (dotted glows, ripples, comet cards)
-- Custom gradients, shadows, and floating dock UI
+| Category | Technologies |
+|---------|--------------|
+| **Frontend / Framework** | Next.js 16, React 19, App Router, Turbopack, Server Components |
+| **AI & LLMs** | OpenAI AgentKit, OpenAI ChatKit, AI Twin Chat (Crisp, Clear, Chatty) |
+| **CMS** | Sanity CMS, Sanity Studio v3, Visual Editing, GROQ, Vision Tool |
+| **Auth** | Clerk Authentication, Theming, Middleware |
+| **Styling** | Tailwind CSS v4, Framer Motion, Aceternity UI |
+| **Tooling** | TypeScript, Biome, Lucide Icons, Tabler Icons |
 
 ---
 
 # 💻 Core Features
 
-### 🧠 **AI Twin Chat**
-- Built with **OpenAI ChatKit**
-- 3 personality modes
-- Live context memory
-- Typing animation + message streaming
+### 🧠 AI Twin Chat (OpenAI ChatKit)
+- 3 personality modes: **Crisp**, **Clear**, **Chatty**
+- Live streaming responses
+- Typing simulation & context memory
 
-### 🧩 **Dual-App Architecture**
-- Public-facing portfolio  
-- Fully functional **Sanity Studio** (hosted in same repo)
+### 🧩 Dual-App Architecture
+- Public-facing Next.js portfolio  
+- Fully integrated **Sanity Studio** within the same codebase
 
-### ✏️ **Visual Content Editing**
-- Edit content directly in Sanity Studio  
-- See changes **instantly** via Presentation Tool  
-- No redeploy needed
+### ✏️ Visual Content Editing
+- Real-time preview via **Sanity Presentation Tool**
+- Draft Mode for pre-publication previews  
+- Live updates with no redeploy needed
 
-### 🦸 **Dynamic Hero Section**
-- Auto-rotating animated text
-- Floating gradient shapes
-- Responsive & performant
+### 🦸 Dynamic Hero Section
+- Animated rotating headlines  
+- Floating gradient elements  
+- Smooth Framer Motion micro-interactions
 
-### 📊 **Comprehensive Content Sections**
+### 📊 Comprehensive Portfolio Sections
 - About  
-- Experience timeline  
-- Skills bar charts (Recharts)  
+- Experience Timeline  
+- Skills visualized with Recharts  
 - Projects  
 - Testimonials  
-- Blog (optional)  
 - Achievements  
-- Contact  
+- Contact Form  
+- Optional Blog
 
-### 🧭 **Floating Navigation Dock**
-- macOS-style glass dock  
-- Scroll-aware highlighting  
-- Smooth hover magnification
+### 🧭 macOS-Style Floating Dock
+- Glassmorphic UI  
+- Hover magnification  
+- Section-aware navigation  
 
 ---
 
 # 🛠️ Advanced Concepts
 
-### 🤖 **OpenAI AgentKit Integration**
-- AI agent with context, personality, and messaging
-- Extendable agent actions
-
-### 🎛️ **Sanity Visual Editing**
-- Live preview (no refresh)
-- Draft mode (preview unpublished content)
-- Reusable GROQ helpers
-- Vision query playground
-
-### 🔧 **Next.js 16 Server Actions**
-- Server-safe form submissions  
-- Contact form handler  
-- Edge-ready API routes  
-
-### 🧬 **Type-Safe Everything**
-- End-to-end TypeScript  
-- Auto-generated types from Sanity schemas  
-- Strong linting with **Biome**
-
-### ♿ **Accessibility First**
-- Radix UI primitives  
-- Semantic HTML  
-- Color contrast compliance  
+| Feature | Description |
+|--------|-------------|
+| **OpenAI AgentKit Integration** | AI agent with extendable actions & contextual reasoning |
+| **Sanity Visual Editing** | Side-by-side editing, live preview, Vision GROQ playground |
+| **Next.js 16 Server Actions** | Server-first form handling (Contact form) |
+| **Type Safety** | Full TypeScript, auto-generated schema types |
+| **Accessibility First** | Radix UI primitives, semantic structure, WCAG-friendly styling |
 
 ---
 
-# 🚀 Deployment
+# 🚀 Deployment Pipeline
 
-### 🎯 **Production Setup**
-- **Vercel** — Portfolio front-end
-- **Sanity** — Hosted Studio & dataset
-- Continuous deployment  
+### 🏭 Hosting & Deployment
+- **Vercel** for frontend deployment  
+- **Sanity** for Studio + dataset hosting  
 - Automatic image optimization  
+- Fast CI/CD with instant previews  
 
-### 📦 **Content Management**
-- 61 starter documents imported via script
-- CMS-driven hero, skills, timeline, testimonials, and project cards
+### 📦 Content & Data
+- 61 sample CMS documents auto-imported  
+- CMS-powered sections: Skills, Experience, Testimonials, Hero, Projects  
 
-### 🪄 **Custom Components**
-- Animated testimonial carousel
-- World map component
-- Interactive dock
-- Charts with **Recharts**
-- Aceternity UI animations
+### 🧩 Custom Components
+- Testimonial carousel  
+- Interactive world map  
+- Recharts-based skills  
+- Aceternity UI effects (glows, ripples, comet animations)
 
-### 🧰 **Modern Tooling**
-- **Biome** for speed-of-light linting & formatting  
-- **Lucide + Tabler icons**  
-- **Metadata and SEO configuration**
+### 🧰 Tooling & Optimization
+- **Biome** for ultra-fast linting/formatting  
+- **Lucide** + **Tabler** icon packs  
+- SEO metadata configuration  
+- Image optimization & Server Components for performance  
 
 ---
 
@@ -175,10 +119,15 @@ cd nextgen-robertjohnsonportfolio
 
 npm install
 npm run dev
+```
 
-Local will run:
-- Next.js app → http://localhost:3000
-- Sanity Studio → http://localhost:3000/studio
+---
+
+| App               | URL                                                          |
+| ----------------- | ------------------------------------------------------------ |
+| **Next.js App**   | [http://localhost:3000](http://localhost:3000)               |
+| **Sanity Studio** | [http://localhost:3000/studio](http://localhost:3000/studio) |
+
 
 nextgen-robertjohnsonportfolio/
 │
@@ -191,7 +140,7 @@ nextgen-robertjohnsonportfolio/
 │   ├── schemaTypes/
 │   └── utils/
 │
-├── components/              # UI components
+├── components/              # Reusable UI components
 │   ├── ai/
 │   ├── charts/
 │   ├── testimonials/
@@ -202,7 +151,9 @@ nextgen-robertjohnsonportfolio/
 │
 └── tailwind.config.js
 
-Robert Johnson
-Full-Stack Software Engineer • AI Builder
-https://robertjohnsonportfolio.com
+---
 
+#👤 Author
+## Robert Johnson
+- Full-Stack Software Engineer • AI Builder
+- 🔗 https://robertjohnsonportfolio.com
