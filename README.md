@@ -129,6 +129,7 @@ npm run dev
 | **Sanity Studio** | [http://localhost:3000/studio](http://localhost:3000/studio) |
 
 
+```plaintext
 nextgen-robertjohnsonportfolio/
 │
 ├── app/                     # Next.js 16 App Router
@@ -150,6 +151,7 @@ nextgen-robertjohnsonportfolio/
 │   └── screenshots/         # README images
 │
 └── tailwind.config.js
+```
 
 ---
 
