@@ -118,6 +118,7 @@ export default defineType({
         { name: "linkedin", title: "LinkedIn", type: "url" },
         { name: "twitter", title: "Twitter/X", type: "url" },
         { name: "website", title: "Personal Website", type: "url" },
+        { name: "resume", title: "Resume", type: "url" },
         { name: "medium", title: "Medium", type: "url" },
         { name: "devto", title: "Dev.to", type: "url" },
         { name: "youtube", title: "YouTube", type: "url" },
