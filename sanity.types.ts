@@ -611,6 +611,7 @@ export type Profile = {
     twitter?: string;
     website?: string;
     medium?: string;
+    resume?: string;
     devto?: string;
     youtube?: string;
     stackoverflow?: string;
