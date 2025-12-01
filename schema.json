@@ -3831,6 +3831,13 @@
               },
               "optional": true
             },
+            "resume": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "string"
+              },
+              "optional": true
+            },
             "medium": {
               "type": "objectAttribute",
               "value": {
