@@ -928,6 +928,7 @@ export type CHAT_PROFILE_QUERYResult =
         linkedin?: string;
         twitter?: string;
         website?: string;
+        resume?: string;
         medium?: string;
         devto?: string;
         youtube?: string;
@@ -1306,6 +1307,7 @@ export type PROFILE_QUERYResult =
         linkedin?: string;
         twitter?: string;
         website?: string;
+        resume?: string;
         medium?: string;
         devto?: string;
         youtube?: string;
