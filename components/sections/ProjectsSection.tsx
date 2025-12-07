@@ -38,7 +38,7 @@ export async function ProjectsSection() {
             {projects.map((project) => (
               <div
                 key={project.slug?.current}
-                className="@container/card group bg-card border rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+                className="@container/card group bg-card border border-zinc-500 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300"
               >
                 {/* Project Image */}
                 {project.coverImage && (
