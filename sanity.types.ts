@@ -540,6 +540,9 @@ export type Project = {
   }>;
   category?:
     | "web-app"
+    | "business-website"
+    | "full-stack-web-app"
+    | "learning-platfroms-ed-tech-systems"
     | "mobile-app"
     | "ai-ml"
     | "api-backend"
@@ -1533,6 +1536,9 @@ export type PROJECTS_QUERYResult = Array<{
   category:
     | "ai-ml"
     | "api-backend"
+    | "business-website"
+    | "full-stack-web-app"
+    | "learning-platfroms-ed-tech-systems"
     | "browser-extension"
     | "cli-tool"
     | "desktop-app"
