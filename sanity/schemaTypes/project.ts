@@ -60,6 +60,9 @@ export default defineType({
       options: {
         list: [
           { title: "Web Application", value: "web-app" },
+          { title: "Business Website", value: "business-website" },
+          { title: "Full-Stack Web Application", value: "full-stack-web-app" },
+          { title: "Learning Platforms / EdTech Systems", value: "learning-platfroms-ed-tech-systems" },
           { title: "Mobile App", value: "mobile-app" },
           { title: "AI/ML Project", value: "ai-ml" },
           { title: "API/Backend", value: "api-backend" },
