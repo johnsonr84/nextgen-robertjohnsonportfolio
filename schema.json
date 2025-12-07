@@ -3343,6 +3343,18 @@
             },
             {
               "type": "string",
+              "value": "business-website"
+            },
+            {
+              "type": "string",
+              "value": "full-stack-web-app"
+            },
+            {
+              "type": "string",
+              "value": "learning-platfroms-ed-tech-systems"
+            },
+            {
+              "type": "string",
               "value": "api-backend"
             },
             {
