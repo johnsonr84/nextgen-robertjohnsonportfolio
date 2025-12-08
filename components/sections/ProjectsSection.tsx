@@ -24,7 +24,8 @@ type Project = {
   category?: string | null;
   liveUrl?: string | null;
   githubUrl?: string | null;
-  coverImage?: unknown;
+  // 👇 key change: don't use `unknown` here
+  coverImage?: any;
   technologies?:
     | { name?: string | null; category?: string | null; color?: string | null }[]
     | null;
