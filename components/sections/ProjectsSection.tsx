@@ -4,17 +4,18 @@ import { defineQuery } from "next-sanity";
 import { urlFor } from "@/sanity/lib/image";
 import { sanityFetch } from "@/sanity/lib/live";
 
-const PROJECTS_QUERY =
-  defineQuery(`*[_type == "project" && featured == true] | order(order asc)[0...6]{
-  title,
-  slug,
-  tagline,
-  category,
-  liveUrl,
-  githubUrl,
-  coverImage,
-  technologies[]->{name, category, color}
-}`);
+const PROJECTS_QUERY = defineQuery(`
+  *[_type == "project" && featured == true] | order(order asc){
+    title,
+    slug,
+    tagline,
+    category,
+    liveUrl,
+    githubUrl,
+    coverImage,
+    technologies[]->{name, category, color}
+  }
+`);
 
 export async function ProjectsSection() {
   const { data: projects } = await sanityFetch({ query: PROJECTS_QUERY });
@@ -30,7 +31,9 @@ export async function ProjectsSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Featured Projects
           </h2>
-          <p className="text-xl text-muted-foreground">Stuff I built that actually works... I mean Some of my best work!</p>
+          <p className="text-xl text-muted-foreground">
+            Stuff I built that actually works... I mean Some of my best work!
+          </p>
         </div>
 
         <div className="@container">
@@ -52,8 +55,6 @@ export async function ProjectsSection() {
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    {/* Glass overlay that fades on hover */}
-                    {/* <div className="absolute inset-0 bg-background/40 backdrop-blur-[2px] group-hover:opacity-0 transition-opacity duration-300" /> */}
                   </div>
                 )}
 
