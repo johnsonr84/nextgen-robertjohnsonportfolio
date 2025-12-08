@@ -17,7 +17,6 @@ const PROJECTS_QUERY = defineQuery(`
   }
 `);
 
-// Explicit Project type so we don't depend on sanity.types for this query
 type Project = {
   title?: string | null;
   slug?: { current?: string | null } | null;
@@ -32,8 +31,8 @@ type Project = {
 };
 
 export async function ProjectsSection() {
-  const { data } = await sanityFetch<Project[]>({ query: PROJECTS_QUERY });
-  const projects: Project[] = data ?? [];
+  const { data } = await sanityFetch({ query: PROJECTS_QUERY });
+  const projects = (data ?? []) as Project[];
 
   if (!projects || projects.length === 0) {
     return null;
