@@ -2967,11 +2967,27 @@
             },
             {
               "type": "string",
-              "value": "ai-ml"
+              "value": "aiml"
             },
             {
               "type": "string",
               "value": "devops"
+            },
+            {
+              "type": "string",
+              "value": "ideade"
+            },
+            {
+              "type": "string",
+              "value": "api"
+            },
+            {
+              "type": "string",
+              "value": "auth"
+            },
+            {
+              "type": "string",
+              "value": "operatingsystems"
             },
             {
               "type": "string",
@@ -2988,6 +3004,10 @@
             {
               "type": "string",
               "value": "testing"
+            },
+            {
+              "type": "string",
+              "value": "styles"
             },
             {
               "type": "string",
@@ -3339,7 +3359,7 @@
             },
             {
               "type": "string",
-              "value": "ai-ml"
+              "value": "aiml"
             },
             {
               "type": "string",
@@ -3360,6 +3380,22 @@
             {
               "type": "string",
               "value": "devops"
+            },
+            {
+              "type": "string",
+              "value": "ideade"
+            },
+            {
+              "type": "string",
+              "value": "api"
+            },
+            {
+              "type": "string",
+              "value": "auth"
+            },
+            {
+              "type": "string",
+              "value": "operatingsystems"
             },
             {
               "type": "string",

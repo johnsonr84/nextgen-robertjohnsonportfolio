@@ -52,7 +52,10 @@ export default defineType({
         list: [
           { title: "Tutorial", value: "tutorial" },
           { title: "Technical", value: "technical" },
-          { title: "AI/ML", value: "ai-ml" },
+          { title: "AI ML", value: "aiml" },
+          { title: "API", value: "api" },
+          { title: "IDE/ADE", value: "ideade" },
+          { title: "Auth", value: "auth" },
           { title: "Web Development", value: "web-dev" },
           { title: "Career", value: "career" },
           { title: "Opinion", value: "opinion" },

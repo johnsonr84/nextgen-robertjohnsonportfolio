@@ -478,12 +478,17 @@ export type Skill = {
   category?:
     | "frontend"
     | "backend"
-    | "ai-ml"
+    | "aiml"
     | "devops"
+    | "ideade"
+    | "auth"
+    | "operatingsystems"
+    | "api"
     | "database"
     | "mobile"
     | "cloud"
     | "testing"
+    | "styles"
     | "design"
     | "tools"
     | "soft-skills"
@@ -544,9 +549,11 @@ export type Project = {
     | "full-stack-web-app"
     | "learning-platfroms-ed-tech-systems"
     | "mobile-app"
-    | "ai-ml"
-    | "api-backend"
+    | "aiml"
     | "devops"
+    | "auth"
+    | "operatingsystems"
+    | "api"
     | "open-source"
     | "cli-tool"
     | "desktop-app"
@@ -1262,17 +1269,22 @@ export type CERTIFICATIONS_QUERYResult = Array<{
   skills: Array<{
     name: string | null;
     category:
-      | "ai-ml"
+      | "aiml"
       | "backend"
       | "cloud"
       | "database"
       | "design"
       | "devops"
+      | "ideade"
+      | "auth"
+      | "operatingsystems"
+      | "api"
       | "frontend"
       | "mobile"
       | "other"
       | "soft-skills"
       | "testing"
+      | "styles"
       | "tools"
       | null;
   }> | null;
@@ -1388,17 +1400,22 @@ export type EXPERIENCE_QUERYResult = Array<{
   technologies: Array<{
     name: string | null;
     category:
-      | "ai-ml"
+      | "aiml"
       | "backend"
       | "cloud"
       | "database"
       | "design"
       | "devops"
+      | "ideade"
+      | "auth"
+      | "operatingsystems"
+      | "api"
       | "frontend"
       | "mobile"
       | "other"
       | "soft-skills"
       | "testing"
+      | "styles"
       | "tools"
       | null;
   }> | null;
@@ -1534,7 +1551,7 @@ export type PROJECTS_QUERYResult = Array<{
   slug: Slug | null;
   tagline: string | null;
   category:
-    | "ai-ml"
+    | "aiml"
     | "api-backend"
     | "business-website"
     | "full-stack-web-app"
@@ -1543,6 +1560,10 @@ export type PROJECTS_QUERYResult = Array<{
     | "cli-tool"
     | "desktop-app"
     | "devops"
+    | "ideade"
+    | "auth"
+    | "operatingsystems"
+    | "api"
     | "game"
     | "mobile-app"
     | "open-source"
@@ -1567,17 +1588,22 @@ export type PROJECTS_QUERYResult = Array<{
   technologies: Array<{
     name: string | null;
     category:
-      | "ai-ml"
+      | "aiml"
       | "backend"
       | "cloud"
       | "database"
       | "design"
       | "devops"
+      | "ideade"
+      | "auth"
+      | "operatingsystems"
+      | "api"
       | "frontend"
       | "mobile"
       | "other"
       | "soft-skills"
       | "testing"
+      | "styles"
       | "tools"
       | null;
     color: string | null;
@@ -1625,17 +1651,22 @@ export type SERVICES_QUERYResult = Array<{
   technologies: Array<{
     name: string | null;
     category:
-      | "ai-ml"
+      | "aiml"
       | "backend"
       | "cloud"
       | "database"
       | "design"
       | "devops"
+      | "ideade"
+      | "auth"
+      | "operatingsystems"
+      | "api"
       | "frontend"
       | "mobile"
       | "other"
       | "soft-skills"
       | "testing"
+      | "styles"
       | "tools"
       | null;
   }> | null;
@@ -1656,17 +1687,22 @@ export type SERVICES_QUERYResult = Array<{
 export type SKILLS_QUERYResult = Array<{
   name: string | null;
   category:
-    | "ai-ml"
+    | "aiml"
     | "backend"
     | "cloud"
     | "database"
     | "design"
     | "devops"
+    | "ideade"
+    | "auth"
+    | "operatingsystems"
+    | "api"
     | "frontend"
     | "mobile"
     | "other"
     | "soft-skills"
     | "testing"
+    | "styles"
     | "tools"
     | null;
   proficiency: "advanced" | "beginner" | "expert" | "intermediate" | null;

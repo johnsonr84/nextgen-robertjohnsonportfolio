@@ -21,6 +21,27 @@ interface SkillsChartProps {
   skills: Skill[];
 }
 
+// Map category values → exact labels from your schema
+const CATEGORY_LABELS: Record<string, string> = {
+  frontend: "Frontend",
+  backend: "Backend",
+  aiml: "AI/ML",
+  ideade: "IDE/ADE",
+  api: "API",
+  auth: "Auth",
+  devops: "DevOps",
+  operatingsystems: "Operating Systems",
+  database: "Database",
+  mobile: "Mobile",
+  cloud: "Cloud",
+  testing: "Testing",
+  styles: "Styling & UI Frameworks",
+  design: "Design",
+  tools: "Version Control/ Repos",
+  "soft-skills": "Soft Skills",
+  other: "Other",
+};
+
 export function SkillsChart({ skills }: SkillsChartProps) {
   if (!skills || skills.length === 0) {
     return null;
@@ -40,11 +61,9 @@ export function SkillsChart({ skills }: SkillsChartProps) {
       {Array.from(groupedSkills.entries()).map(([category, categorySkills]) => {
         if (!categorySkills || categorySkills.length === 0) return null;
 
-        // Format category for display
-        const displayLabel = category
-          .split("-")
-          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-          .join(" ");
+        // ✅ Use explicit label map instead of title-casing
+        const displayLabel =
+          CATEGORY_LABELS[category] ?? CATEGORY_LABELS[category.toLowerCase()] ?? category;
 
         // Prepare chart data and config
         const chartData = categorySkills.map((skill) => ({

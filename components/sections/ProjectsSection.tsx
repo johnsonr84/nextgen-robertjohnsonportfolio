@@ -78,7 +78,7 @@ export async function ProjectsSection() {
                   {/* Tech Stack */}
                   {project.technologies && project.technologies.length > 0 && (
                     <div className="flex flex-wrap gap-1.5 @md/card:gap-2">
-                      {project.technologies.slice(0, 4).map((tech, idx) => {
+                      {project.technologies.slice(0, 8).map((tech, idx) => {
                         const techData =
                           tech && typeof tech === "object" && "name" in tech
                             ? tech
@@ -92,9 +92,9 @@ export async function ProjectsSection() {
                           </span>
                         ) : null;
                       })}
-                      {project.technologies.length > 4 && (
+                      {project.technologies.length > 8 && (
                         <span className="text-xs px-2 py-0.5 @md/card:py-1 rounded-md bg-muted">
-                          +{project.technologies.length - 4}
+                          +{project.technologies.length - 8}
                         </span>
                       )}
                     </div>
