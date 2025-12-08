@@ -17,8 +17,23 @@ const PROJECTS_QUERY = defineQuery(`
   }
 `);
 
+// Explicit Project type so we don't depend on sanity.types for this query
+type Project = {
+  title?: string | null;
+  slug?: { current?: string | null } | null;
+  tagline?: string | null;
+  category?: string | null;
+  liveUrl?: string | null;
+  githubUrl?: string | null;
+  coverImage?: unknown;
+  technologies?:
+    | { name?: string | null; category?: string | null; color?: string | null }[]
+    | null;
+};
+
 export async function ProjectsSection() {
-  const { data: projects } = await sanityFetch({ query: PROJECTS_QUERY });
+  const { data } = await sanityFetch<Project[]>({ query: PROJECTS_QUERY });
+  const projects: Project[] = data ?? [];
 
   if (!projects || projects.length === 0) {
     return null;
@@ -38,9 +53,9 @@ export async function ProjectsSection() {
 
         <div className="@container">
           <div className="grid grid-cols-1 @2xl:grid-cols-2 @5xl:grid-cols-3 gap-8">
-            {projects.map((project) => (
+            {projects.map((project: Project) => (
               <div
-                key={project.slug?.current}
+                key={project.slug?.current ?? project.title ?? "project"}
                 className="@container/card group bg-card border border-zinc-500 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300"
               >
                 {/* Project Image */}
@@ -86,7 +101,7 @@ export async function ProjectsSection() {
                             : null;
                         return techData?.name ? (
                           <span
-                            key={`${project.slug?.current}-tech-${idx}`}
+                            key={`${project.slug?.current ?? "project"}-tech-${idx}`}
                             className="text-xs px-2 py-0.5 @md/card:py-1 rounded-md bg-muted"
                           >
                             {techData.name}
