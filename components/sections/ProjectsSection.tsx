@@ -27,8 +27,8 @@ type Project = {
   // 👇 key change: don't use `unknown` here
   coverImage?: any;
   technologies?:
-    | { name?: string | null; category?: string | null; color?: string | null }[]
-    | null;
+  | { name?: string | null; category?: string | null; color?: string | null }[]
+  | null;
 };
 
 export async function ProjectsSection() {
@@ -123,7 +123,8 @@ export async function ProjectsSection() {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 text-center px-3 py-2 @md/card:px-4 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-xs @md/card:text-sm"
+                        className="flex-1 basis-1/2 text-center px-3 py-2 @md/card:px-4 rounded-lg text-white font-bold hover:scale-105 transition-all duration-500 bg-gradient-to-br from-violet-700 via-purple-600 to-fuchsia-600 
+    dark:from-violet-600 dark:via-purple-600 dark:to-fuchsia-600  hover:bg-primary/90 transition-colors text-xs @md/card:text-sm"
                       >
                         Live Demo
                       </Link>
@@ -133,7 +134,7 @@ export async function ProjectsSection() {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-3 py-2 @md/card:px-4 rounded-lg border hover:bg-accent transition-colors text-xs @md/card:text-sm text-center"
+                        className="basis-1/2 px-3 py-2 @md/card:px-4 rounded-lg border font-bold hover:scale-105 transition-all duration-500 hover:bg-accent transition-colors text-xs @md/card:text-sm text-center"
                       >
                         GitHub
                       </Link>
