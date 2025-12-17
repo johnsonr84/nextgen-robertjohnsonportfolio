@@ -559,6 +559,9 @@ export type Project = {
     | "desktop-app"
     | "browser-extension"
     | "game"
+    | "saas"
+    | "ecommerce"
+    | "platform"
     | "other";
   liveUrl?: string;
   githubUrl?: string;
@@ -1565,6 +1568,9 @@ export type PROJECTS_QUERYResult = Array<{
     | "operatingsystems"
     | "api"
     | "game"
+    | "ecommerce"
+    | "saas"
+    | "platform"
     | "mobile-app"
     | "open-source"
     | "other"
