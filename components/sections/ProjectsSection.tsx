@@ -63,8 +63,8 @@ export async function ProjectsSection() {
                   <div className="relative aspect-video overflow-hidden bg-muted">
                     <Image
                       src={urlFor(project.coverImage)
-                        .width(600)
-                        .height(400)
+                        // .width(600)
+                        // .height(450)
                         .url()}
                       alt={project.title || "Project image"}
                       fill
