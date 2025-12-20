@@ -155,7 +155,7 @@ nextgen-robertjohnsonportfolio/
 
 ---
 
-#👤 Author
+# 👤 Author
 # Robert Johnson
 - Full-Stack Software Engineer • AI Powered Engineer
 - 🔗 https://robertjohnsonportfolio.com
