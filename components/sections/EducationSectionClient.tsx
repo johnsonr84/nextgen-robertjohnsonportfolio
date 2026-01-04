@@ -19,18 +19,19 @@ import {
 } from "@/components/ui/dialog";
 
 type EducationItem = {
-  institution: string;
-  degree: string;
-  fieldOfStudy?: string;
-  startDate?: string;
-  endDate?: string;
-  current?: boolean;
-  gpa?: string;
-  description?: string;
-  achievements?: string[];
+  institution: string | null;
+  degree: string | null;
+  fieldOfStudy?: string | null;
+  startDate?: string | null;
+  endDate?: string | null;
+  current?: boolean | null;
+  gpa?: string | null;
+  description?: string | null;
+  achievements?: string[] | null;
   logo?: any;
-  website?: string;
+  website?: string | null;
   certificateImage?: any;
+  order?: number | null;
 };
 
 interface EducationSectionClientProps {
