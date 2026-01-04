@@ -9,6 +9,7 @@ import { sanityFetch } from "@/sanity/lib/live";
 const SERVICES_QUERY =
   defineQuery(`*[_type == "service"] | order(order asc, _createdAt desc){
   title,
+  subtitle,
   slug,
   icon,
   shortDescription,

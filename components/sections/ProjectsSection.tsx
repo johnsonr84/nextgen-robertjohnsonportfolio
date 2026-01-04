@@ -7,9 +7,10 @@ import { sanityFetch } from "@/sanity/lib/live";
 const PROJECTS_QUERY = defineQuery(`
   *[_type == "project" && featured == true] | order(order asc){
     title,
+    subtitle,
     slug,
     tagline,
-    category,
+    categories,
     liveUrl,
     githubUrl,
     coverImage,
@@ -19,9 +20,10 @@ const PROJECTS_QUERY = defineQuery(`
 
 type Project = {
   title?: string | null;
+  subtitle?: string | null;
   slug?: { current?: string | null } | null;
   tagline?: string | null;
-  category?: string | null;
+  categories?: string[] | null;
   liveUrl?: string | null;
   githubUrl?: string | null;
   // 👇 key change: don't use `unknown` here
@@ -76,16 +78,24 @@ export async function ProjectsSection() {
                 {/* Project Content */}
                 <div className="p-4 @md/card:p-6 space-y-3 @md/card:space-y-4">
                   <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      {project.category && (
-                        <span className="text-xs px-2 py-0.5 @md/card:py-1 rounded-full bg-primary/10 text-primary">
-                          {project.category}
-                        </span>
+                    <div className="flex flex-wrap items-center gap-2 mb-2">
+                      {project.categories && project.categories.length > 0 && (
+                        project.categories.map((cat, idx) => (
+                          <span
+                            key={`${project.slug?.current ?? "project"}-cat-${idx}`}
+                            className="text-xs px-2 py-0.5 @md/card:py-1 rounded-full bg-primary/10 text-primary"
+                          >
+                            {cat}
+                          </span>
+                        ))
                       )}
                     </div>
                     <h3 className="text-lg @md/card:text-xl font-semibold mb-2 line-clamp-2">
                       {project.title || "Untitled Project"}
                     </h3>
+                    <h5 className="text-lg @md/card:text-xl font-semibold mb-2 line-clamp-2">
+                      {project.subtitle || "Untitled Subtitle"}
+                    </h5>
                     <p className="text-muted-foreground text-xs @md/card:text-sm line-clamp-2">
                       {project.tagline}
                     </p>
