@@ -154,6 +154,7 @@ Use these patterns to query portfolio data:
 *[_type == "blog"] | order(publishedAt desc)[0...5]{
   _id,
   title,
+  subtitle,
   slug,
   excerpt,
   publishedAt,
