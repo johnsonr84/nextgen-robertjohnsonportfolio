@@ -3191,6 +3191,62 @@
               },
               {
                 "type": "string",
+                "value": "medical"
+              },
+              {
+                "type": "string",
+                "value": "healthcare"
+              },
+              {
+                "type": "string",
+                "value": "dental"
+              },
+              {
+                "type": "string",
+                "value": "realestate"
+              },
+              {
+                "type": "string",
+                "value": "travel"
+              },
+              {
+                "type": "string",
+                "value": "fitness"
+              },
+              {
+                "type": "string",
+                "value": "fintech"
+              },
+              {
+                "type": "string",
+                "value": "food-delivery"
+              },
+              {
+                "type": "string",
+                "value": "sms-notification"
+              },
+              {
+                "type": "string",
+                "value": "cms"
+              },
+              {
+                "type": "string",
+                "value": "lms"
+              },
+              {
+                "type": "string",
+                "value": "pms"
+              },
+              {
+                "type": "string",
+                "value": "erp"
+              },
+              {
+                "type": "string",
+                "value": "ims"
+              },
+              {
+                "type": "string",
                 "value": "aiml"
               },
               {

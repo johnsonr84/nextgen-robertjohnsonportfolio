@@ -481,7 +481,7 @@ export type Project = {
     _key: string;
     [internalGroqTypeReferenceTo]?: "skill";
   }>;
-  categories?: Array<"web-app" | "business-website" | "website" | "web-scraping" | "mern" | "mean" | "pern" | "aws" | "microservices" | "full-stack" | "learning-platforms-ed-tech-systems" | "mobile-app" | "aiml" | "ai-powered" | "ideade" | "auth" | "social-media" | "instant-messaging" | "video-chat" | "file-downloading" | "file-uploading" | "operatingsystems" | "apis" | "mapping" | "api-backend" | "devops" | "open-source" | "cli-tool" | "desktop-app" | "browser-extension" | "game" | "ecommerce" | "platform" | "saas" | "other">;
+  categories?: Array<"web-app" | "business-website" | "website" | "web-scraping" | "mern" | "mean" | "pern" | "aws" | "microservices" | "full-stack" | "learning-platforms-ed-tech-systems" | "mobile-app" | "medical" | "healthcare" | "dental" | "realestate" | "travel" | "fitness" | "fintech" | "food-delivery" | "sms-notification" | "cms" | "lms" | "pms" | "erp" | "ims" | "aiml" | "ai-powered" | "ideade" | "auth" | "social-media" | "instant-messaging" | "video-chat" | "file-downloading" | "file-uploading" | "operatingsystems" | "apis" | "mapping" | "api-backend" | "devops" | "open-source" | "cli-tool" | "desktop-app" | "browser-extension" | "game" | "ecommerce" | "platform" | "saas" | "other">;
   liveUrl?: string;
   githubUrl?: string;
   featured?: boolean;
@@ -1335,7 +1335,7 @@ export type PROJECTS_QUERYResult = Array<{
   subtitle: string | null;
   slug: Slug | null;
   tagline: string | null;
-  categories: Array<"ai-powered" | "aiml" | "api-backend" | "apis" | "auth" | "aws" | "browser-extension" | "business-website" | "cli-tool" | "desktop-app" | "devops" | "ecommerce" | "file-downloading" | "file-uploading" | "full-stack" | "game" | "ideade" | "instant-messaging" | "learning-platforms-ed-tech-systems" | "mapping" | "mean" | "mern" | "microservices" | "mobile-app" | "open-source" | "operatingsystems" | "other" | "pern" | "platform" | "saas" | "social-media" | "video-chat" | "web-app" | "web-scraping" | "website"> | null;
+  categories: Array<"ai-powered" | "aiml" | "api-backend" | "apis" | "auth" | "aws" | "browser-extension" | "business-website" | "cli-tool" | "cms" | "dental" | "desktop-app" | "devops" | "ecommerce" | "erp" | "file-downloading" | "file-uploading" | "fintech" | "fitness" | "food-delivery" | "full-stack" | "game" | "healthcare" | "ideade" | "ims" | "instant-messaging" | "learning-platforms-ed-tech-systems" | "lms" | "mapping" | "mean" | "medical" | "mern" | "microservices" | "mobile-app" | "open-source" | "operatingsystems" | "other" | "pern" | "platform" | "pms" | "realestate" | "saas" | "sms-notification" | "social-media" | "travel" | "video-chat" | "web-app" | "web-scraping" | "website"> | null;
   liveUrl: string | null;
   githubUrl: string | null;
   coverImage: {
