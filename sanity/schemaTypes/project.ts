@@ -83,6 +83,7 @@ export default defineType({
               { title: "Medical", value: "medical" },
               { title: "Healthcare", value: "healthcare" },
               { title: "Dental", value: "dental" },
+              { title: "Mental Health", value: "mental-health" },
               { title: "Real Estate", value: "realestate" },
               { title: "Travel", value: "travel" },
               { title: "Fitness", value: "fitness" },
