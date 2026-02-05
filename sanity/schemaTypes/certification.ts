@@ -70,6 +70,13 @@ export default defineType({
       type: "number",
       initialValue: 0,
     }),
+    defineField({
+      name: "featuredCertification",
+      title: "Featured Certification",
+      type: "boolean",
+      description: "Show this certification prominently on the homepage",
+      initialValue: false,
+    }),
   ],
   preview: {
     select: {
@@ -78,6 +85,7 @@ export default defineType({
       media: "logo",
     },
   },
+  
   orderings: [
     {
       title: "Display Order",

@@ -1849,6 +1849,13 @@
           "type": "number"
         },
         "optional": true
+      },
+      "featuredCertification": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "boolean"
+        },
+        "optional": true
       }
     }
   },
