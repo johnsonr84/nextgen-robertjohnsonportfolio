@@ -145,6 +145,7 @@ Use these patterns to query portfolio data:
   name,
   issuer,
   issueDate,
+  featuredCertification,
   expiryDate,
   credentialUrl,
   description
