@@ -7,7 +7,7 @@ import { urlFor } from "@/sanity/lib/image";
 import { sanityFetch } from "@/sanity/lib/live";
 
 const CERTIFICATIONS_QUERY =
-  defineQuery(`*[_type == "certification"] | order(issueDate desc){
+  defineQuery(`*[_type == "certification" && featuredCertification == true] | order(order asc, issueDate desc){
   name,
   issuer,
   issueDate,
@@ -17,8 +17,28 @@ const CERTIFICATIONS_QUERY =
   logo,
   description,
   skills[]->{name, category},
-  order
+  order,
+  featuredCertification
 }`);
+
+type CertificationSkill = {
+  name?: string | null;
+  category?: string | null;
+};
+
+type Certification = {
+  name?: string | null;
+  issuer?: string | null;
+  issueDate?: string | null;
+  expiryDate?: string | null;
+  credentialId?: string | null;
+  credentialUrl?: string | null;
+  logo?: unknown;
+  description?: string | null;
+  skills?: CertificationSkill[] | null;
+  order?: number | null;
+  featuredCertification?: boolean | null;
+};
 
 export async function CertificationsSection() {
   const { data: certifications } = await sanityFetch({
@@ -59,7 +79,7 @@ export async function CertificationsSection() {
 
         <div className="@container">
           <div className="grid grid-cols-1 @2xl:grid-cols-2 gap-10">
-            {certifications.map((cert) => (
+            {certifications.map((cert: Certification) => (
               <CometCard
                 key={`${cert.issuer}-${cert.name}-${cert.issueDate}`}
                 rotateDepth={8}
@@ -74,38 +94,43 @@ export async function CertificationsSection() {
                   }}
                 >
                   {/* Inner Certificate - Dark Background */}
-                  <div className="relative bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-950 dark:from-zinc-950 dark:via-black dark:to-zinc-950 border-2 border-yellow-600/40 p-8 flex flex-col min-h-[450px]">
+                  <div className="relative bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-950 dark:from-zinc-950 dark:via-black dark:to-zinc-950 border-2 border-cyan-600/40 p-8 flex flex-col min-h-[450px]">
                     {/* Decorative Corner Frames - Top Left */}
                     <div className="absolute top-0 left-0 w-20 h-20">
-                      <div className="absolute top-3 left-3 w-10 h-10 border-t-2 border-l-2 border-yellow-600/60" />
-                      <div className="absolute top-5 left-5 w-6 h-6 border-t-2 border-l-2 border-yellow-600/60" />
+                      <div className="absolute top-3 left-3 w-10 h-10 border-t-2 border-l-2 border-cyan-600/60" />
+                      <div className="absolute top-5 left-5 w-6 h-6 border-t-2 border-l-2 border-cyan-600/60" />
                     </div>
 
                     {/* Decorative Corner Frames - Top Right */}
                     <div className="absolute top-0 right-0 w-20 h-20">
-                      <div className="absolute top-3 right-3 w-10 h-10 border-t-2 border-r-2 border-yellow-600/60" />
-                      <div className="absolute top-5 right-5 w-6 h-6 border-t-2 border-r-2 border-yellow-600/60" />
+                      <div className="absolute top-3 right-3 w-10 h-10 border-t-2 border-r-2 border-cyan-600/60" />
+                      <div className="absolute top-5 right-5 w-6 h-6 border-t-2 border-r-2 border-cyan-600/60" />
                     </div>
 
                     {/* Decorative Corner Frames - Bottom Left */}
                     <div className="absolute bottom-0 left-0 w-20 h-20">
-                      <div className="absolute bottom-3 left-3 w-10 h-10 border-b-2 border-l-2 border-yellow-600/60" />
-                      <div className="absolute bottom-5 left-5 w-6 h-6 border-b-2 border-l-2 border-yellow-600/60" />
+                      <div className="absolute bottom-3 left-3 w-10 h-10 border-b-2 border-l-2 border-cyan-600/60" />
+                      <div className="absolute bottom-5 left-5 w-6 h-6 border-b-2 border-l-2 border-cyan-600/60" />
                     </div>
 
                     {/* Decorative Corner Frames - Bottom Right */}
                     <div className="absolute bottom-0 right-0 w-20 h-20">
-                      <div className="absolute bottom-3 right-3 w-10 h-10 border-b-2 border-r-2 border-yellow-600/60" />
-                      <div className="absolute bottom-5 right-5 w-6 h-6 border-b-2 border-r-2 border-yellow-600/60" />
+                      <div className="absolute bottom-3 right-3 w-10 h-10 border-b-2 border-r-2 border-cyan-600/60" />
+                      <div className="absolute bottom-5 right-5 w-6 h-6 border-b-2 border-r-2 border-cyan-600/60" />
                     </div>
 
                     {/* Diamond Accents - Corners */}
-                    <div className="absolute top-2 left-2 w-3 h-3 rotate-45 bg-yellow-600/70" />
-                    <div className="absolute top-2 right-2 w-3 h-3 rotate-45 bg-yellow-600/70" />
-                    <div className="absolute bottom-2 left-2 w-3 h-3 rotate-45 bg-yellow-600/70" />
-                    <div className="absolute bottom-2 right-2 w-3 h-3 rotate-45 bg-yellow-600/70" />
+                    <div className="absolute top-2 left-2 w-3 h-3 rotate-45 bg-cyan-600/70" />
+                    <div className="absolute top-2 right-2 w-3 h-3 rotate-45 bg-cyan-600/70" />
+                    <div className="absolute bottom-2 left-2 w-3 h-3 rotate-45 bg-cyan-600/70" />
+                    <div className="absolute bottom-2 right-2 w-3 h-3 rotate-45 bg-cyan-600/70" />
 
                     <div className="relative z-10 flex flex-col items-center text-center flex-1">
+                      {cert.featuredCertification && (
+                        <span className="mb-3 inline-flex items-center gap-1 rounded-full border border-cyan-600/40 bg-cyan-600/20 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-cyan-500">
+                          Featured
+                        </span>
+                      )}
                       {/* Date at Top */}
                       <div className="mb-4">
                         <p className="text-xs text-zinc-400">
@@ -115,10 +140,10 @@ export async function CertificationsSection() {
 
                       {/* Certificate Title - Small and Gold at top */}
                       <div className="mb-5">
-                        <h4 className="text-lg font-bold text-yellow-600/80 mb-1 uppercase tracking-wide">
+                        <h4 className="text-lg font-bold text-cyan-600/80 mb-1 uppercase tracking-wide">
                           CERTIFICATE
                         </h4>
-                        <p className="text-xs text-yellow-600/80 italic">for</p>
+                        <p className="text-xs text-cyan-600/80 italic">for</p>
                       </div>
 
                       {/* Certificate Name - Main Subject */}
@@ -136,7 +161,7 @@ export async function CertificationsSection() {
                       {/* Logo Badge */}
                       {cert.logo && (
                         <div className="relative mb-5 flex items-center justify-center">
-                          <div className="relative w-16 h-16 p-2 bg-white/10 rounded-full border border-yellow-600/30">
+                          <div className="relative w-64 h-64 p-5 bg-white rounded-50 border border-cyan-600/30">
                             <div className="relative w-full h-full">
                               <Image
                                 src={urlFor(cert.logo)
@@ -165,17 +190,17 @@ export async function CertificationsSection() {
                         {cert.skills && cert.skills.length > 0 && (
                           <div className="mb-4">
                             <div className="flex flex-wrap justify-center gap-1.5">
-                              {cert.skills.slice(0, 4).map((skill, idx) => {
+                              {cert.skills.slice(0, 4).map((skill: CertificationSkill, idx: number) => {
                                 const skillData =
                                   skill &&
-                                  typeof skill === "object" &&
-                                  "name" in skill
+                                    typeof skill === "object" &&
+                                    "name" in skill
                                     ? skill
                                     : null;
                                 return skillData?.name ? (
                                   <span
                                     key={`${cert.name}-skill-${idx}`}
-                                    className="px-2.5 py-1 text-[10px] bg-yellow-600/20 text-yellow-500 font-medium border border-yellow-600/30"
+                                    className="px-2.5 py-1 text-[10px] bg-cyan-600/20 text-cyan-500 font-medium border border-cyan-600/30"
                                   >
                                     {skillData.name}
                                   </span>
@@ -218,12 +243,12 @@ export async function CertificationsSection() {
 
                         {/* Verify Credential Button */}
                         {cert.credentialUrl && (
-                          <div className="w-full pt-4 border-t border-yellow-600/20">
+                          <div className="w-full pt-4 border-t border-cyan-600/20">
                             <Link
                               href={cert.credentialUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center justify-center gap-1.5 px-5 py-2 text-xs font-semibold text-zinc-900 bg-yellow-600/90 hover:bg-yellow-500 transition-all shadow-md hover:shadow-lg"
+                              className="inline-flex items-center justify-center gap-1.5 px-5 py-2 text-xs font-semibold text-zinc-900 bg-cyan-600/90 hover:bg-cyan-500 transition-all shadow-md hover:shadow-lg"
                             >
                               Verify Credential
                               <IconExternalLink className="w-3.5 h-3.5" />

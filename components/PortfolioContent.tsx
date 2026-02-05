@@ -2,7 +2,7 @@ import {
   AboutSection,
   // AchievementsSection,
   // BlogSection,
-  // CertificationsSection,
+  CertificationsSection,
   ContactSection,
   EducationSection,
   ExperienceSection,
@@ -23,7 +23,7 @@ async function PortfolioContent() {
       <EducationSection />
       <ProjectsSection />
       <SkillsSection /> 
-      {/* <CertificationsSection /> */}
+      <CertificationsSection />
       {/* <AchievementsSection /> */}
       {/* <ServicesSection /> */}
       {/* <BlogSection /> */}
