@@ -157,7 +157,7 @@ export async function CertificationsSection() {
                         {/* Logo Badge */}
                         {cert.logo && (
                           <div className="relative mb-5 flex items-center justify-center">
-                            <div className="relative w-64 h-64 p-5 bg-white rounded-50 border border-cyan-600/30">
+                            <div className="relative w-100 h-64 p-5 bg-transparent rounded-50">
                               <div className="relative w-full h-full">
                                 <Image
                                   src={urlFor(cert.logo)
