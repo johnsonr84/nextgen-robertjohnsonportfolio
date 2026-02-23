@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "biome check",
     "format": "biome format --write",
-    "typegen": "sanity schema extract && sanity typegen generate"
+    "typegen": "sanity schema extract && sanity typegen generate",
+    "staged": "node scripts/staged.js"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.35.5",
